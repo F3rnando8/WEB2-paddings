@@ -1,0 +1,559 @@
+/* =====================================
+   RESET
+   ===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* Aplicar border-box globalmente es una buena práctica */
+    box-sizing: border-box;
+}
+
+/* ACTUALIZACIÓN DE ESTILO: Tema oscuro y vibrante */
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+    background: #1e1e2d; /* Fondo oscuro moderno */
+    color: #f0f4f8; /* Texto claro */
+    line-height: 1.6;
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50; /* Color primario vibrante */
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.subtitle {
+    text-align: center;
+    color: #90a4ae;
+    margin-bottom: 3.5rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* =====================================
+   SECCIONES DEMO - Interfaz Más Llamativa
+   ===================================== */
+
+.demo-section {
+    background: #2a2a3a; /* Fondo oscuro para las secciones */
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    border-radius: 16px; /* Esquinas más redondeadas */
+    /* Box Shadow más profundo para efecto "elevado" */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 5px rgba(3, 169, 244, 0.1);
+    border: 1px solid #3c3c54; /* Borde sutil */
+}
+
+.demo-section h2 {
+    color: #03A9F4 !important; /* Azul secundario para secciones */
+    margin-bottom: 1.5rem;
+    font-size: 2rem !important;
+    border-bottom: 2px solid rgba(3, 169, 244, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.demo-section h3 {
+    color: #FF9800; /* Naranja para subtítulos */
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.info {
+    background: #4CAF501A; /* Verde con transparencia */
+    color: #f0f4f8;
+    padding: 1rem;
+    border-left: 4px solid #4CAF50;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+/* =====================================
+   GRIDS
+   ===================================== */
+
+.examples-grid {
+    display: grid;
+    /* Ajustado para acomodar más elementos */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* =====================================
+   BOX DEMOS - PADDING UNIFORME
+   ===================================== */
+
+.box {
+    background: #37474f; /* Fondo oscuro grisáceo */
+    border: 2px solid #546e7a;
+    border-radius: 8px;
+    min-height: 100px;
+    display: flex; /* Para centrar el contenido */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    width: auto; /* Para que solo ocupe lo necesario */
+    font-weight: 600;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.content p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+    color: #f0f4f8;
+}
+
+.content p strong {
+    font-size: 1.1rem;
+    color: #FFEB3B; /* Amarillo vibrante */
+}
+
+/* ⭐ PADDING UNIFORME - Diferentes valores */
+.padding-none {
+    padding: 0;
+    background: #E91E63; /* Magenta */
+}
+
+.padding-small {
+    padding: 10px;
+    background: #03A9F4; /* Azul */
+}
+
+.padding-medium {
+    padding: 20px;
+    background: #4CAF50; /* Verde */
+}
+
+.padding-large {
+    padding: 40px;
+    background: #9C27B0; /* Púrpura */
+}
+
+/* NUEVOS EJEMPLOS 1 y 2 (Unidades Relativas) */
+.padding-em {
+    padding: 1.5em; /* Relativo al font-size del elemento (1.5 * 16px por defecto) */
+    background: #FF9800; /* Naranja */
+    font-size: 18px; /* Cambiar el font-size para mostrar el efecto 'em' */
+}
+
+.padding-percent {
+    padding: 10%; /* Relativo al ancho del contenedor padre (.box) */
+    background: #00BCD4; /* Cyan */
+}
+
+/* ⭐ PADDING ASIMÉTRICO */
+.padding-vertical {
+    padding: 30px 10px; /* vertical | horizontal */
+    background: #FFEB3B; /* Amarillo */
+    color: #212121;
+}
+
+.padding-horizontal {
+    padding: 10px 40px; /* vertical | horizontal */
+    background: #1de9b6; /* Verde Lima/Menta */
+    color: #212121;
+}
+
+.padding-custom {
+    padding: 10px 20px 30px 40px; /* top | right | bottom | left */
+    background: #795548; /* Café */
+}
+
+/* NUEVOS EJEMPLOS 3 y 4 */
+.padding-three-value {
+    padding: 5px 25px 45px; /* top | right/left | bottom */
+    background: #FF5722; /* Rojo-Naranja */
+}
+
+.padding-bottom-only {
+    /* Usando la propiedad individual */
+    padding-bottom: 50px; 
+    padding-top: 5px; /* Añadimos un poco de top/horizontal para visualización */
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #FFCA28; /* Amarillo claro */
+    color: #212121;
+}
+
+
+/* =====================================
+   CASOS PRÁCTICOS - BOTONES
+   ===================================== */
+
+.buttons-demo {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background: #03A9F4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(3, 169, 244, 0.3);
+}
+
+.btn:hover {
+    background: #0288D1;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(3, 169, 244, 0.5);
+}
+
+.btn-small { padding: 8px 16px; }
+.btn-medium { padding: 12px 24px; }
+.btn-large { padding: 16px 32px; }
+
+/* NUEVO EJEMPLO 5 */
+.btn-rem {
+    padding: 0.8rem 2rem; /* Uso de REM para escalabilidad en el tamaño de la fuente base */
+    background: #4CAF50;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+.btn-rem:hover {
+    background: #388E3C;
+    box-shadow: 0 8px 15px rgba(76, 175, 80, 0.5);
+}
+
+/* =====================================
+   CASOS PRÁCTICOS - INPUTS
+   ===================================== */
+
+.inputs-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.input {
+    border: 2px solid #546e7a;
+    background: #37474f;
+    color: #f0f4f8;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #FF9800;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+}
+
+/* Placeholder color en tema oscuro */
+.input::placeholder {
+    color: #90a4ae;
+}
+
+.input-small { padding: 8px 12px; }
+.input-medium { padding: 12px 16px; }
+.input-large { padding: 16px 20px; }
+
+/* NUEVO EJEMPLO 6 */
+.input-asymmetric-vertical {
+    /* Más padding abajo que arriba */
+    padding: 5px 20px 25px 20px; 
+    border-color: #E91E63;
+}
+
+
+/* =====================================
+   CASOS PRÁCTICOS - CARDS
+   ===================================== */
+
+.cards-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card {
+    background: #37474f;
+    border: 1px solid #546e7a;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card h4 {
+    color: #FFEB3B;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.card p {
+    color: #b0bec5;
+    font-size: 0.95rem;
+    margin: 0.25rem 0;
+}
+
+.card-compact { padding: 10px; }
+.card-comfortable { padding: 20px; }
+.card-spacious { padding: 40px; }
+
+/* NUEVO EJEMPLO 7 */
+.card-horizontal-focus {
+    /* Padding más ancho en horizontal para "airear" el contenido lateralmente */
+    padding: 15px 50px; 
+    border: 3px solid #00BCD4;
+}
+
+/* =====================================
+   PADDING Y BACKGROUNDS
+   ===================================== */
+
+.bg-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.bg-box {
+    /* Fondo con gradiente vibrante */
+    background: linear-gradient(135deg, #FF5722 0%, #FFCA28 100%);
+    border-radius: 12px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(255, 87, 34, 0.5);
+}
+
+.bg-no-padding { padding: 0; }
+.bg-with-padding { padding: 30px; }
+
+.inner-content {
+    background: #1e1e2d; /* El contenido interno tiene su propio BG oscuro */
+    color: #f0f4f8;
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #FFEB3B;
+}
+
+/* NUEVO EJEMPLO 8 */
+.bg-with-opacity-padding {
+    padding: 20px;
+    /* Usamos un color de fondo con transparencia */
+    background: rgba(76, 175, 80, 0.8);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.5);
+}
+
+
+/* =====================================
+   BOX-SIZING COMPARISON
+   ===================================== */
+
+.comparison-box { text-align: center; }
+
+.comparison-box h3 {
+    color: #FFEB3B;
+    font-size: 1.3rem;
+}
+
+.sized-box {
+    width: 200px;
+    margin: 0 auto 1rem;
+    background: #03A9F4;
+    color: white;
+    text-align: center;
+    border: 3px solid #f0f4f8;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sized-box p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+.highlight {
+    font-weight: 700;
+    font-size: 1.1rem;
+    background: rgba(255,255,255,0.2);
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.content-box-demo {
+    box-sizing: content-box;
+    padding: 20px;
+}
+
+.border-box-demo {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.explanation {
+    color: #90a4ae;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+/* =====================================
+   INLINE VS BLOCK
+   ===================================== */
+
+.inline-padded {
+    padding: 5px 15px;
+    background: #FF9800;
+    color: #1e1e2d;
+    font-weight: 600;
+    border-radius: 4px;
+    /* Padding horizontal funciona, vertical se superpone */
+}
+
+.inline-block-padded {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    /* Padding funciona correctamente en todos los lados */
+}
+
+.block-padded {
+    padding: 20px;
+    background: #9C27B0;
+    color: white;
+    margin: 1rem 0;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* NUEVOS EJEMPLOS 9 y 10 */
+.inline-line-height-padded {
+    display: inline;
+    padding: 5px 15px;
+    background: #E91E63;
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    /* Usar line-height puede ayudar a controlar el espaciado vertical alrededor de inline */
+    line-height: 2.5; 
+    vertical-align: middle;
+}
+
+.block-padded-vw {
+    padding: 2vw; /* Padding que se ajusta con el ancho del viewport */
+    background: #00BCD4;
+    color: #1e1e2d;
+    margin: 1rem 0;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+
+/* =====================================
+   CÓDIGO DE REFERENCIA
+   ===================================== */
+
+.code-section {
+    background: #151520; 
+    color: #ecf0f1;
+}
+
+.code-section h2 {
+    color: #FFEB3B !important;
+}
+
+pre {
+    background: #1e1e2d; 
+    padding: 2rem;
+    border-radius: 12px;
+    overflow-x: auto;
+    font-family: 'Fira Code', monospace;
+    line-height: 1.8;
+    margin-top: 1.5rem;
+    border: 1px solid #3c3c54;
+}
+
+code {
+    color: #1de9b6; 
+    font-size: 0.95rem;
+    background: none;
+}
+
+/* =====================================
+   RESPONSIVE
+   ===================================== */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .demo-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .examples-grid,
+    .cards-demo,
+    .comparison-grid,
+    .bg-demo {
+        grid-template-columns: 1fr;
+    }
+    
+    .buttons-demo {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
